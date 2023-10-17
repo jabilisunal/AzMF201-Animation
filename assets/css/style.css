@@ -1,0 +1,135 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+
+.wheel {
+    max-width: 550px;
+    max-height: 550px;
+    width: 55vw;
+    height: 55vw;
+    /* width: 400px;
+    height: 400px; */
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    animation-name: wheel;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 0;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    transform-origin: 0% 0%;
+   
+}
+
+.line:nth-of-type(2) {
+    transform: rotate(60deg);
+}
+
+.line:nth-of-type(3) {
+    transform: rotate(120deg);
+}
+
+.line:nth-of-type(4) {
+    transform: rotate(180deg);
+}
+
+.line:nth-of-type(5) {
+    transform: rotate(240deg);
+}
+
+.line:nth-of-type(6) {
+    transform: rotate(300deg);
+}
+
+ .cabin {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 2px solid green;
+    position: absolute;
+    /* transform-origin: 50% 0%; */
+    /* animation-name:line ;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} 
+
+.cabin:nth-of-type(1) {
+    top: -11%;
+    right: 65%;
+}
+
+.cabin:nth-of-type(2) {
+    right: 14%;
+    top: -10%;
+}
+
+.cabin:nth-of-type(3) {
+    right: -16%;
+    top: 40%;
+}
+
+
+.cabin:nth-of-type(4) {
+    right: 15%;
+    top: 92%;
+}
+
+.cabin:nth-of-type(5) {
+    top: 91%;
+    left: 16%;
+}
+
+.cabin:nth-of-type(6) {
+    top: 41%;
+    left: -17%;
+}
+
+@keyframes wheel {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes line{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        background-color: red;
+    }
+    50%{
+        background-color: blue;
+    }
+    75%{
+        background-color: hotpink;
+    }
+    100%{
+        transform: rotate(160deg);
+    }
+}
